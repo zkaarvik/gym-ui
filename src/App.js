@@ -3,13 +3,28 @@ import logo from './logo.svg';
 import './App.css';
 
 class App extends Component {
+
+  state = {};
+
+  componentDidMount() {
+    this.hello();
+  }
+
+  hello = () => {
+    fetch('/api/v1/hello')
+        .then(response => response.text())
+        .then(message => {
+          this.setState({message: message});
+        });
+  };
+
   render() {
     return (
       <div className="App">
         <header className="App-header">
           <img src={logo} className="App-logo" alt="logo" />
           <p>
-            Edit <code>src/App.js</code> and save to reload.
+            What did the server say? <code>{this.state.message}</code>
           </p>
           <a
             className="App-link"
