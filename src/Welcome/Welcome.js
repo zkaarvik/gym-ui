@@ -7,7 +7,7 @@ class Welcome extends React.Component{
         return (
             <div>
                 <h1>Welcome to the gym!</h1>
-                <Link to={'login'}>Login page</Link>
+                <Link to={'/login'}>Login page</Link>
             </div>
         )
     }
