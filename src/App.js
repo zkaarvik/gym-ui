@@ -4,6 +4,7 @@ import Login from './Login/Login.js';
 import './App.css';
 import 'antd/dist/antd.css';
 import Welcome from "./Welcome/Welcome";
+import Header from "./Header/Header";
 
 class App extends Component {
 
@@ -11,7 +12,7 @@ class App extends Component {
     return (
         <Router>
             <div>
-                <div>Header goes here</div>
+                <Header />
 
                 <Route exact path="/" component={Welcome} />
                 <Route path="/login" component={Login} />
