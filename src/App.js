@@ -1,45 +1,22 @@
 import React, { Component } from 'react';
-import Login from './login/Login.js'
-import logo from './logo.svg';
+import { BrowserRouter as Router, Route} from "react-router-dom";
+import Login from './Login/Login.js';
 import './App.css';
 import 'antd/dist/antd.css';
+import Welcome from "./Welcome/Welcome";
 
 class App extends Component {
 
-  state = {};
-
-  componentDidMount() {
-    this.hello();
-  }
-
-  hello = () => {
-    fetch('/api/v1/hello')
-        .then(response => response.text())
-        .then(message => {
-          this.setState({message: message});
-        });
-  };
-
   render() {
     return (
-      <div className="App">
-        <header className="App-header">
-          <img src={logo} className="App-logo" alt="logo" />
-          <p>
-            What did the server say? <code>{this.state.message}</code>
-          </p>
-          <a
-            className="App-link"
-            href="https://reactjs.org"
-            target="_blank"
-            rel="noopener noreferrer"
-          >
-            Learn React
-          </a>
-        </header>
+        <Router>
+            <div>
+                <div>Header goes here</div>
 
-        <Login/>
-      </div>
+                <Route exact path="/" component={Welcome} />
+                <Route path="/login" component={Login} />
+            </div>
+        </Router>
     );
   }
 }
