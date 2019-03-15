@@ -2,6 +2,7 @@ import React, { Component } from 'react';
 import Login from './login/Login.js'
 import logo from './logo.svg';
 import './App.css';
+import 'antd/dist/antd.css';
 
 class App extends Component {
 
