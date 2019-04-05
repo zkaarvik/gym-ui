@@ -1,5 +1,6 @@
 import React from 'react';
 import './Login.css';
+import {Button, Form} from "semantic-ui-react";
 
 class Login extends React.Component{
 
@@ -14,11 +15,7 @@ class Login extends React.Component{
         this.handleInputChange = this.handleInputChange.bind(this);
     }
 
-    handleInputChange(event) {
-        const target = event.target;
-        const value = target.value;
-        const name = target.name;
-
+    handleInputChange(event, {name, value}) {
         this.setState({
             [name]: value
         });
@@ -26,21 +23,11 @@ class Login extends React.Component{
 
     render() {
         return (
-            <div className="gym-login-form">
-                <div>
-                    <input placeholder="Username"/>
-                </div>
-
-                <div>
-                    <input type="password" placeholder="Password"/>
-                </div>
-
-                <div>
-                    <button type="submit" className="gym-login-form-button">
-                        Log in
-                    </button>
-                </div>
-            </div>
+            <Form>
+                <Form.Input label="Email" placeholder="Email" name="email" value={this.state.email} onChange={this.handleInputChange} />
+                <Form.Input label="Password" placeholder="Password" name="password" type="password" value={this.state.password} onChange={this.handleInputChange} />
+                <Button type='submit'>Submit</Button>
+            </Form>
         )
     }
 }
