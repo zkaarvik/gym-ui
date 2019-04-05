@@ -1,10 +1,14 @@
 import React from 'react';
+import {Header, Icon} from "semantic-ui-react";
 
 class GymHeader extends React.Component{
 
     render() {
         return (
-            <h1>The Gym</h1>
+            <Header as="h1" textAlign="center" icon>
+                <Icon name="chart line" color="grey" />
+                Gym
+            </Header>
         )
     }
 }
