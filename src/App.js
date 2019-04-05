@@ -1,6 +1,6 @@
 import React, {Component} from 'react';
 import {BrowserRouter as Router, Route} from "react-router-dom";
-import { Button, Icon, Menu, Segment, Sidebar } from 'semantic-ui-react'
+import {Button, Container, Icon, Menu, Segment, Sidebar} from 'semantic-ui-react'
 import Login from './Login/Login.js';
 import './App.css';
 import Welcome from "./Welcome/Welcome";
@@ -48,14 +48,14 @@ class App extends Component {
                     </Sidebar>
 
                     <Sidebar.Pusher dimmed={this.state.visible}>
-                        <Segment basic className="AppContent">
+                        <Container className="AppContent">
                             <GymHeader/>
                             <Button disabled={this.state.visible} onClick={this.handleShowClick}>
                                 Show sidebar
                             </Button>
                             <Route exact path="/" component={Welcome}/>
                             <Route path="/login" component={Login}/>
-                        </Segment>
+                        </Container>
                     </Sidebar.Pusher>
                 </Sidebar.Pushable>
             </Router>

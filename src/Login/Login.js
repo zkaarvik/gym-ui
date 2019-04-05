@@ -1,6 +1,6 @@
 import React from 'react';
 import './Login.css';
-import {Button, Form, Segment} from "semantic-ui-react";
+import {Button, Container, Form, Segment} from "semantic-ui-react";
 
 class Login extends React.Component{
 
@@ -23,7 +23,7 @@ class Login extends React.Component{
 
     render() {
         return (
-            <Segment>
+            <Container text as={Segment}>
                 <Form>
                     <Form.Input
                         label="Email"
@@ -46,7 +46,7 @@ class Login extends React.Component{
                     />
                     <Button fluid type='submit' size="large">Login</Button>
                 </Form>
-            </Segment>
+            </Container>
         )
     }
 }
