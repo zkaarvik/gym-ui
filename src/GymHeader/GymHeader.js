@@ -1,6 +1,6 @@
 import React from 'react';
 
-class Header extends React.Component{
+class GymHeader extends React.Component{
 
     render() {
         return (
@@ -9,4 +9,4 @@ class Header extends React.Component{
     }
 }
 
-export default Header;
+export default GymHeader;
