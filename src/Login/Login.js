@@ -28,6 +28,7 @@ class Login extends React.Component{
                         label="Email"
                         placeholder="Email"
                         name="email"
+                        type="email"
                         icon="user"
                         iconPosition="left"
                         value={this.state.email}

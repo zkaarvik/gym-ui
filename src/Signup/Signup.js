@@ -45,7 +45,8 @@ class Signup extends React.Component{
                         onChange={this.handleInputChange}
                     />
                     <Button fluid type='submit' size="large">Create an Account</Button>
-                    <Container text textAlign="center">
+
+                    <Container fluid textAlign="center">
                         Already have an account? <Link to={'/login'}>Log in</Link>
                     </Container>
                 </Form>
