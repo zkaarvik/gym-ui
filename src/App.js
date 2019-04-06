@@ -1,6 +1,6 @@
 import React, {Component} from 'react';
 import {BrowserRouter as Router, Route} from "react-router-dom";
-import {Button, Container, Icon, Menu, Segment, Sidebar} from 'semantic-ui-react'
+import {Button, Container, Header, Icon, Menu, Segment, Sidebar} from 'semantic-ui-react'
 import Login from './Login/Login.js';
 import './App.css';
 import Welcome from "./Welcome/Welcome";
@@ -20,15 +20,19 @@ class App extends Component {
                 <Sidebar.Pushable as={Segment} basic>
                     <Sidebar
                         as={Menu}
-                        animation='overlay'
-                        icon='labeled'
+                        animation="overlay"
                         inverted
+                        size="massive"
                         onHide={this.handleSidebarHide}
                         vertical
                         visible={this.state.visible}
-                        width='thin'
+                        width="thin"
                         color="blue"
                     >
+                        <Menu.Item as={Header} header textAlign="center">
+                            Gym
+                        </Menu.Item>
+
                         <Menu.Item as='a'>
                             <Icon name='home' />
                             Home
