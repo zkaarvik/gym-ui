@@ -1,7 +1,8 @@
 import React from 'react';
 import {Button, Container, Form, Segment} from "semantic-ui-react";
+import {Link} from "react-router-dom";
 
-class Login extends React.Component{
+class Signup extends React.Component{
 
     constructor(props) {
         super(props);
@@ -43,11 +44,14 @@ class Login extends React.Component{
                         value={this.state.password}
                         onChange={this.handleInputChange}
                     />
-                    <Button fluid type='submit' size="large">Login</Button>
+                    <Button fluid type='submit' size="large">Create an Account</Button>
+                    <Container text textAlign="center">
+                        Already have an account? <Link to={'/login'}>Log in</Link>
+                    </Container>
                 </Form>
             </Container>
         )
     }
 }
 
-export default Login;
+export default Signup;

@@ -5,6 +5,8 @@ import Login from './Login/Login.js';
 import './App.css';
 import Welcome from "./Welcome/Welcome";
 import GymHeader from "./GymHeader/GymHeader";
+import Signup from "./Signup/Signup";
+import Home from "./Home/Home";
 
 class App extends Component {
     state = {
@@ -59,6 +61,8 @@ class App extends Component {
                             </Button>
                             <Route exact path="/" component={Welcome}/>
                             <Route path="/login" component={Login}/>
+                            <Route path="/signup" component={Signup}/>
+                            <Route path="/home" component={Home}/>
                         </Container>
                     </Sidebar.Pusher>
                 </Sidebar.Pushable>
